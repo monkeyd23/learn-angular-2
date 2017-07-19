@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ArtistItemComponent } from './component.artist-item'
 
 export class Artist {
     name:string;
@@ -17,6 +17,10 @@ export class Artist {
 export class AppComponent {
     artists = ARTISTS;
     currentArtist:Artist;
+
+    showArtist(item) {
+      this.currentArtist = item;
+    }
 }
 
 var ARTISTS: Artist[] = [
